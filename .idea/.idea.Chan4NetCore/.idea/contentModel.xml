@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\majid\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_Chan4NetCore.-1392663825.00" t="ExcludeRecursive" />
+    <e p="D:\eshop\Chan4NetCore" t="IncludeFlat">
+      <e p="Chan4NetCore" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="BufferedChan" t="Include">
+          <e p="BufferedChan.cs" t="Include" />
+        </e>
+        <e p="Chan.cs" t="Include" />
+        <e p="Chan4NetCore.csproj" t="IncludeRecursive" />
+        <e p="Helpers" t="Include">
+          <e p="ChanUtility.cs" t="Include" />
+          <e p="ChanYieldEnumerator.cs" t="Include" />
+        </e>
+        <e p="IChan.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.0" t="Include">
+              <e p="Chan4NetCore.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="UnbufferedChan" t="Include">
+          <e p="UnbufferedChan.cs" t="Include" />
+          <e p="UnbufferedChanReceiver.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Chan4NetCore.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
