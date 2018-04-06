@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace Chan4NetCore.Helpers
 {
     internal static class ChanUtility
