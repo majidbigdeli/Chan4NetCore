@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Chan4NetCore.Helpers;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading;
-using Chan4NetCore.Helpers;
 
 namespace Chan4NetCore.UnbufferedChan
 {

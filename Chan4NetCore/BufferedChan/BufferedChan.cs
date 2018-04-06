@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Chan4NetCore.Helpers;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading;
-using Chan4NetCore.Helpers;
 
 namespace Chan4NetCore.BufferedChan
 {
@@ -28,7 +28,7 @@ namespace Chan4NetCore.BufferedChan
         }
 
         public bool IsClosed { get; private set; }
-        
+
         public void Send(T item, CancellationToken cancellationToken)
         {
             while (_queue.Count == _size)
@@ -40,22 +40,22 @@ namespace Chan4NetCore.BufferedChan
             _queue.Enqueue(item);
             _canTakeEvent.Set();
         }
-        
+
         public void Send(T item)
         {
             Send(item, CancellationToken.None);
         }
-        
+
         public void Close()
         {
             IsClosed = true;
         }
-        
+
         public T Receive()
         {
             return Receive(CancellationToken.None);
         }
-        
+
         public T Receive(CancellationToken cancellationToken)
         {
             while (true)
@@ -77,12 +77,12 @@ namespace Chan4NetCore.BufferedChan
                 _canTakeEvent.Wait(cancellationToken);
             }
         }
-        
+
         public IEnumerable<T> Yield()
         {
             return Yield(CancellationToken.None);
         }
-        
+
         public IEnumerable<T> Yield(CancellationToken cancellationToken)
         {
             var enumerator = new ChanYieldEnumerator<T>(this, cancellationToken);

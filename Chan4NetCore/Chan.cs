@@ -1,19 +1,20 @@
-﻿using System.Collections.Generic;
-using System.Threading;
-using Chan4NetCore.BufferedChan;
+﻿using Chan4NetCore.BufferedChan;
 using Chan4NetCore.UnbufferedChan;
+using System.Collections.Generic;
+using System.Threading;
 
 namespace Chan4NetCore
 {
- /// <summary>
+    /// <summary>
     ///     Golang chan like implementation.
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class Chan<T> : IChan<T>
     {
         private readonly IChan<T> _chan;
+
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="size">null or an integer no less than 1. if null or not specified, an unbuffered chan will be created.</param>
         public Chan(int? size = null)
@@ -27,6 +28,7 @@ namespace Chan4NetCore
                 _chan = new UnbufferedChan<T>();
             }
         }
+
         /// <summary>
         ///     Returns if the channel has been closed. You cannot continue adding item into a closed channel.
         ///     However, items remaining in the channel can be taken and yielded until the channel is empty.
@@ -35,6 +37,7 @@ namespace Chan4NetCore
         {
             get { return _chan.IsClosed; }
         }
+
         /// <summary>
         ///     Closes the channel. No more item can be sent into channel after this is called.
         /// </summary>
@@ -42,8 +45,9 @@ namespace Chan4NetCore
         {
             _chan.Close();
         }
+
         /// <summary>
-        ///     Sends an item into channel. 
+        ///     Sends an item into channel.
         ///     For a buffered channel, If the channel is full, this method will block the current thread,
         ///     until some item is taken.
         /// </summary>
@@ -51,8 +55,9 @@ namespace Chan4NetCore
         {
             _chan.Send(item);
         }
+
         /// <summary>
-        ///     Sends an item into channel. 
+        ///     Sends an item into channel.
         ///     For a buffered channel, If the channel is full, this method will block the current thread,
         ///     until some item is taken.
         ///     If the cancel source is fired, this method will throw an OperationCanceledException.
@@ -63,6 +68,7 @@ namespace Chan4NetCore
         {
             _chan.Send(item, cancellationToken);
         }
+
         /// <summary>
         ///     Removes and returns an item from channel. If the channel is empty, this will block the current thread,
         ///     until an item is sent into the channel.
@@ -72,6 +78,7 @@ namespace Chan4NetCore
         {
             return _chan.Receive();
         }
+
         /// <summary>
         ///     Removes and returns an item from channel. If the channel is empty, this will block the current thread,
         ///     until an item is sent into the channel.
@@ -83,6 +90,7 @@ namespace Chan4NetCore
         {
             return _chan.Receive(cancellationToken);
         }
+
         /// <summary>
         ///     Removes and returns elements from the channel.
         ///     Empty channel will block the current thread.
@@ -93,6 +101,7 @@ namespace Chan4NetCore
         {
             return _chan.Yield();
         }
+
         /// <summary>
         ///     Removes and returns elements from the channel.
         ///     Empty channel will block the current thread.

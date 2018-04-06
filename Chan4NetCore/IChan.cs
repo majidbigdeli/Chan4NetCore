@@ -3,7 +3,6 @@ using System.Threading;
 
 namespace Chan4NetCore
 {
-
     /// <summary>
     ///     Golang chan like implementation.
     /// </summary>
@@ -15,18 +14,21 @@ namespace Chan4NetCore
         ///     However, items remaining in the channel can be taken and yielded until the channel is empty.
         /// </summary>
         bool IsClosed { get; }
+
         /// <summary>
         ///     Closes the channel. No more item can be sent into channel after this is called.
         /// </summary>
         void Close();
+
         /// <summary>
-        ///     Sends an item into channel. 
+        ///     Sends an item into channel.
         ///     For a buffered channel, If the channel is full, this method will block the current thread,
         ///     until some item is taken.
         /// </summary>
         void Send(T item);
+
         /// <summary>
-        ///     Sends an item into channel. 
+        ///     Sends an item into channel.
         ///     For a buffered channel, If the channel is full, this method will block the current thread,
         ///     until some item is taken.
         ///     If the cancel source is fired, this method will throw an OperationCanceledException.
@@ -34,12 +36,14 @@ namespace Chan4NetCore
         /// <param name="item"></param>
         /// <param name="cancellationToken"></param>
         void Send(T item, CancellationToken cancellationToken);
+
         /// <summary>
         ///     Removes and returns an item from channel. If the channel is empty, this will block the current thread,
         ///     until an item is sent into the channel.
         /// </summary>
         /// <returns></returns>
         T Receive();
+
         /// <summary>
         ///     Removes and returns an item from channel. If the channel is empty, this will block the current thread,
         ///     until an item is sent into the channel.
@@ -48,6 +52,7 @@ namespace Chan4NetCore
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         T Receive(CancellationToken cancellationToken);
+
         /// <summary>
         ///     Removes and returns elements from the channel.
         ///     Empty channel will block the current thread.
@@ -55,6 +60,7 @@ namespace Chan4NetCore
         /// </summary>
         /// <returns></returns>
         IEnumerable<T> Yield();
+
         /// <summary>
         ///     Removes and returns elements from the channel.
         ///     Empty channel will block the current thread.
