@@ -37,10 +37,10 @@ namespace Chan4NetCore.Helpers
             }
         }
 
-//        public void Reset()
-//        {
-//            throw new NotImplementedException();
-//        }
+        public void Reset()
+        {
+            throw new NotImplementedException();
+        }
 
         public T Current { get; private set; }
 
