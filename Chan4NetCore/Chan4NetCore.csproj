@@ -1,5 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>netcoreapp2.0</TargetFramework>
+        <Authors>Majid Bigdeli</Authors>
+        <Company>Majid Bigdeli</Company>
+        <Description>A simple C# implementation of Golang/Go chan (https://tour.golang.org/concurrency/2).
+</Description>
     </PropertyGroup>
 </Project>
