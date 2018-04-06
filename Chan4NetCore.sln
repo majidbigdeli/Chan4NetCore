@@ -1,6 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chan4NetCore", "Chan4NetCore\Chan4NetCore.csproj", "{76D056AF-7605-49B4-9A6E-9335FF1C0E25}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.27421.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chan4NetCore", "Chan4NetCore\Chan4NetCore.csproj", "{76D056AF-7605-49B4-9A6E-9335FF1C0E25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chan4NetCore.Tests", "Chan4NetCore.Tests\Chan4NetCore.Tests.csproj", "{53002B23-4CB8-4803-9514-A550350B14C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +17,15 @@ Global
 		{76D056AF-7605-49B4-9A6E-9335FF1C0E25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76D056AF-7605-49B4-9A6E-9335FF1C0E25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76D056AF-7605-49B4-9A6E-9335FF1C0E25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53002B23-4CB8-4803-9514-A550350B14C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53002B23-4CB8-4803-9514-A550350B14C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53002B23-4CB8-4803-9514-A550350B14C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53002B23-4CB8-4803-9514-A550350B14C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {608590B0-A789-4F18-BC84-E1B04C2A8D15}
 	EndGlobalSection
 EndGlobal

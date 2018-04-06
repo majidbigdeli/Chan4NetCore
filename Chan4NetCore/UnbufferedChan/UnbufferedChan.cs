@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace Chan4NetCore.UnbufferedChan
 {
-    internal class UnbufferedChan<T> : IChan<T>
+    public class UnbufferedChan<T> : IChan<T>
     {
         private readonly ConcurrentQueue<UnbufferedChanReceiver<T>> _receivers;
 

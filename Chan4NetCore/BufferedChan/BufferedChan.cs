@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace Chan4NetCore.BufferedChan
 {
-    internal class BufferedChan<T> : IChan<T>
+   public class BufferedChan<T> : IChan<T>
     {
         private readonly ManualResetEventSlim _canAddEvent;
         private readonly ManualResetEventSlim _canTakeEvent;
