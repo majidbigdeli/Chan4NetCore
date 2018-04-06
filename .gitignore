@@ -1,8 +1,7 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/.vs/Chan4NetCore/v15
-/Chan4NetCore/bin/
-/Chan4NetCore/obj/
-
+*.suo
+TestResults
+bin
+obj
+*.DotSettings
+*.nupkg
+.vs
