@@ -1,17 +1,17 @@
 
 
-# Chan4Net
+# Chan4NetCore
 A simple C# implementation of Golang/Go `chan` (https://tour.golang.org/concurrency/2).
 
 ## Installation
-NuGet package is avaiable via https://www.nuget.org/packages/Chan4Net.
+NuGet package is avaiable via https://www.nuget.org/packages/Chan4NetCore.
 ```
-Install-Package Chan4Net
+Install-Package Chan4NetCore
 ```
 
 ## Performance
 The automated performance tests are included in the test project. You can run on you machine.
-`Chan4Net` beats `BlockingCollection` on my local as below.
+`Chan4NetCore` beats `BlockingCollection` on my local as below.
 
 ![Performance Chan vs BlockingCollection](docs/Perf-ChanVsBlockingCollection.jpg)
 
