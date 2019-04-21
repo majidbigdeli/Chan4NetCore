@@ -1,7 +1,3 @@
-
-# Chan4NetCore Fork Of Chan4Net
-https://github.com/superopengl/Chan4Net
-
 # Chan4NetCore
 A simple C# implementation of Golang/Go `chan` (https://tour.golang.org/concurrency/2).
 
